@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Demo Site of Security Issues for AI-Apps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .authors {
+            margin-bottom: 40px;
+            color: #7f8c8d;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .intro-content {
+            text-align: left;
+            color: #444;
+            font-size: 1em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-content {
+            text-align: left;
+            color: #444;
+            font-size: 1em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: #000;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            .authors {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Demo Site of<br>
+            Parasites in the Toolchain:<br>
+            A Large-Scale Analysis of Attacks on the MCP Ecosystem</h1>
+        <div class="authors">
+            <p><strong>Anonymous Researchers</strong></p>
+            <p>Anonymous Institution</p>
+        </div>
+        <h2>Intro</h2>
+        <div class="intro-content">
+            <p>This website demonstrates the attack chain experiments from the paper <em>Parasites in the Toolchain: A Large-Scale Analysis of Attacks on the MCP Ecosystem</em>. All specific MCP server information and author information have been anonymized for privacy and security purposes.</p>
+        </div>
+        <h2>Experiment of Chain1</h2>
+        <div class="section-content">
+            <p>Within Cursor, the user simultaneously connected to <strong>Server 1</strong> with <strong>External Ingestion Tool 1</strong>, <strong>Server 2</strong> with <strong>Privacy Access Tool 2</strong>, and <strong>Server 3</strong> with <strong>Network Access Tool 3</strong>.</p>
+            <p><strong>Attack Flow:</strong></p>
+            <ol style="padding-left: 20px; margin-top: 10px;">
+                <li>The user sends a normal prompt that invokes Tool 1.</li>
+                <li>Tool 1 inadvertently retrieves an external resource containing malicious prompts.</li>
+                <li>The malicious prompts in the context cause Cursor to perform unauthorized actions.</li>
+                <li>Tool 2 is invoked to read the local MCP configuration file.</li>
+                <li>Tool 3 sends the configuration information via email to the attacker.</li>
+            </ol>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="static/Chain1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
+
