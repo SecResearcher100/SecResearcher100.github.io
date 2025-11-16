@@ -119,22 +119,37 @@
             <p><strong>Anonymous Researchers</strong></p>
             <p>Anonymous Institution</p>
         </div>
-        <h2>Intro</h2>
+        <h2>Introduction</h2>
         <div class="intro-content">
-            <p>This website demonstrates the attack chain experiments from the paper <em>Parasites in the Toolchain: A Large-Scale Analysis of Attacks on the MCP Ecosystem</em>. All specific MCP server information and author information have been anonymized for privacy and security purposes.</p>
+            <p>This website presents the MCP Toolchain experiments of MCP-UPD attack from the paper <em>Parasites in the Toolchain: A Large-Scale Analysis of Attacks on the MCP Ecosystem</em>. All specific MCP server information and author information have been anonymized for privacy and security purposes.</p>
             <p><strong>Note:</strong> All test accounts used in this study belong to our own team, and no real-world systems were targeted or compromised.</p>
         </div>
-        <h2>Experiment of Chain1</h2>
+
+        <h2>MCP-UPD Workflow</h2>
         <div class="section-content">
             <p>Within Cursor, the user simultaneously connected to <strong>Server 1</strong> with <strong>External Ingestion Tool 1</strong>, <strong>Server 2</strong> with <strong>Privacy Access Tool 2</strong>, and <strong>Server 3</strong> with <strong>Network Access Tool 3</strong>.</p>
-            <p><strong>Attack Flow:</strong></p>
+            <!-- <p><strong>MCP-UPD Workflow:</strong></p> -->
             <ol style="padding-left: 20px; margin-top: 10px;">
                 <li>The user sends a normal prompt that invokes Tool 1.</li>
                 <li>Tool 1 inadvertently retrieves an external resource containing malicious prompts.</li>
                 <li>The malicious prompts in the context cause Cursor to perform unauthorized actions.</li>
-                <li>Tool 2 is invoked to read the local MCP configuration file.</li>
-                <li>Tool 3 sends the configuration information via email to the attacker.</li>
+                <li>Tool 2 is invoked to read privacy data from user's local machine or other applications.</li>
+                <li>Tool 3 sends the privacy data to where the attacker can get it.</li>
             </ol>
+        </div>
+
+        <h2>Experiment of Chain 1</h2>
+        <div class="section-content">
+            <p><strong>Functions of Tools:</strong></p> 
+            <ol style="padding-left: 20px; margin-top: 10px;">
+                <li>Tool 1: Inadvertently retrieve an external resource containing malicious prompts.</li>
+                <li>Tool 2: Read the local MCP configuration file.</li>
+                <li>Tool 3: Send the configuration information via email to the attacker.</li>
+            </ol>
+            <p><strong>Result:</strong></p>
+            <p>
+                After user's normal usage of Cursor, MCP configuration in user's local machine is disclosed and the attacker can get the configuration information via email.
+            </p>
         </div>
         <div class="video-container">
             <video controls>
@@ -142,6 +157,87 @@
                 Your browser does not support the video tag.
             </video>
         </div>
+
+        <h2>Experiment of Chain 2</h2>
+        <div class="section-content">
+            <p><strong>Functions of Tools:</strong></p> 
+            <ol style="padding-left: 20px; margin-top: 10px;">
+                <li>Tool 1: Inadvertently fetch a content with malicious prompt.</li>
+                <li>Tool 2: Read and print all environment variables.</li>
+                <li>Tool 3: Send the environment variables to a chat channel where the attacker can get it.</li>
+            </ol>
+            <p><strong>Result:</strong></p>
+            <p>
+                After user's normal usage of Cursor, all environment variables in user's local machine is disclosed and the attacker can get the environment variables in the chat channel.
+            </p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="static/chain2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <h2>Experiment of Chain 3</h2>
+        <div class="section-content">
+            <p><strong>Functions of Tools:</strong></p> 
+            <ol style="padding-left: 20px; margin-top: 10px;">
+                <li>Tool 1: Inadvertently get a content from the Internet with malicious prompt.</li>
+                <li>Tool 2: Get the complete server configuration.</li>
+                <li>Tool 3: Edit the online document and publish the configuration to the online document where the attacker can get it.</li>
+            </ol>
+            <p><strong>Result:</strong></p>
+            <p>
+                After user's normal usage of Cursor, the complete server configuration in user's local machine is disclosed and the configurations are published to the online document where the attacker can get it.
+            </p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="static/chain4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <h2>Experiment of Chain 4</h2>
+        <div class="section-content">
+            <p><strong>Functions of Tools:</strong></p> 
+            <ol style="padding-left: 20px; margin-top: 10px;">
+                <li>Tool 1: Create a HTTP GET request and inadvertently get a content with malicious prompt.</li>
+                <li>Tool 2: Get data from an excel file.</li>
+                <li>Tool 3: Create and edit an online document, and publish the data to the online document where the attacker can get it.</li>
+            </ol>
+            <p><strong>Result:</strong></p>
+            <p>
+                After user's normal usage of Cursor, the private data from the excel file in user's local machine is disclosed and the privacy data is published to the online document where the attacker can get it.
+            </p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="static/chain4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <h2>Experiment of Chain 5</h2>
+        <div class="section-content">
+            <p><strong>Functions of Tools:</strong></p> 
+            <ol style="padding-left: 20px; margin-top: 10px;">
+                <li>Tool 1: Get emails from mailbox which contains an email with malicious prompt.</li>
+                <li>Tool 2: Get recent MCP tool calls with arguments and outputs.</li>
+                <li>Tool 3: Create a message with the MCP tool calls history in a public platform.</li>
+            </ol>
+            <p><strong>Result:</strong></p>
+            <p>
+                After user's normal usage of Cursor, the MCP tool calls history from user's local machine is disclosed and the MCP tool calls history is published to the public platform where the attacker can get it.
+            </p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="static/chain5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
     </div>
 </body>
 </html>
