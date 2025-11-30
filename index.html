@@ -95,6 +95,29 @@
             display: block;
         }
 
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        a:hover {
+            color: #764ba2;
+            border-bottom-color: #764ba2;
+            transform: translateY(-1px);
+        }
+
+        a:visited {
+            color: #667eea;
+        }
+
+        a:active {
+            color: #5a67d8;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.8em;
@@ -127,8 +150,7 @@
 
         <h2>MCP-UPD Workflow</h2>
         <div class="section-content">
-            <p>Within Cursor, the user simultaneously connected to <strong>Server 1</strong> with <strong>External Ingestion Tool 1</strong>, <strong>Server 2</strong> with <strong>Privacy Access Tool 2</strong>, and <strong>Server 3</strong> with <strong>Network Access Tool 3</strong>.</p>
-            <!-- <p><strong>MCP-UPD Workflow:</strong></p> -->
+            <p>Within MCP client, the user simultaneously connected to <strong>Server 1</strong> with <strong>External Ingestion Tool 1</strong>, <strong>Server 2</strong> with <strong>Privacy Access Tool 2</strong>, and <strong>Server 3</strong> with <strong>Network Access Tool 3</strong>.</p>
             <ol style="padding-left: 20px; margin-top: 10px;">
                 <li>The user sends a normal prompt that invokes Tool 1.</li>
                 <li>Tool 1 inadvertently retrieves an external resource containing malicious prompts.</li>
@@ -138,7 +160,27 @@
             </ol>
         </div>
 
-        <h2>Experiment of Chain 1</h2>
+        <h2>Table of Contents</h2>
+        <div class="section-content">
+            <p>
+                Here, we present the <strong>MCP Toolchain Experiment</strong> and the <strong>Multi-Clients Experiment</strong> below. In MCP Toolchain Experiment, we use Cursor as the MCP client. In Multi-Clients Experiment, we use chain 1 as the test toolchain.
+            </p>
+            <ol style="padding-left: 20px; margin-top: 10px;">
+                <li><a href="#chain-1">MCP Toolchain Experiment: Chain 1</a></li>
+                <li><a href="#chain-2">MCP Toolchain Experiment: Chain 2</a></li>
+                <li><a href="#chain-3">MCP Toolchain Experiment: Chain 3</a></li>
+                <li><a href="#chain-4">MCP Toolchain Experiment: Chain 4</a></li>
+                <li><a href="#chain-5">MCP Toolchain Experiment: Chain 5</a></li>
+                <li><a href="#chain-6">MCP Toolchain Experiment: Chain 6</a></li>
+                <li><a href="#chain-7">MCP Toolchain Experiment: Chain 7</a></li>
+                <li><a href="#chain-9">MCP Toolchain Experiment: Chain 9</a></li>
+                <li><a href="#chain-10">MCP Toolchain Experiment: Chain 10</a></li>
+                <li><a href="#vscode-cline">Multi-Clients Experiment: VSCode Cline</a></li>
+                <li><a href="#cherry-studio">Multi-Clients Experiment: Cherry Studio </a></li>
+            </ol>
+        </div>
+
+        <h2 id="chain-1">Experiment of Chain 1</h2>
         <div class="section-content">
             <p><strong>Functions of Tools:</strong></p> 
             <ol style="padding-left: 20px; margin-top: 10px;">
@@ -158,7 +200,7 @@
             </video>
         </div>
 
-        <h2>Experiment of Chain 2</h2>
+        <h2 id="chain-2">Experiment of Chain 2</h2>
         <div class="section-content">
             <p><strong>Functions of Tools:</strong></p> 
             <ol style="padding-left: 20px; margin-top: 10px;">
@@ -178,7 +220,7 @@
             </video>
         </div>
 
-        <h2>Experiment of Chain 3</h2>
+        <h2 id="chain-3">Experiment of Chain 3</h2>
         <div class="section-content">
             <p><strong>Functions of Tools:</strong></p> 
             <ol style="padding-left: 20px; margin-top: 10px;">
@@ -198,7 +240,7 @@
             </video>
         </div>
 
-        <h2>Experiment of Chain 4</h2>
+        <h2 id="chain-4">Experiment of Chain 4</h2>
         <div class="section-content">
             <p><strong>Functions of Tools:</strong></p> 
             <ol style="padding-left: 20px; margin-top: 10px;">
@@ -218,7 +260,7 @@
             </video>
         </div>
         
-        <h2>Experiment of Chain 5</h2>
+        <h2 id="chain-5">Experiment of Chain 5</h2>
         <div class="section-content">
             <p><strong>Functions of Tools:</strong></p> 
             <ol style="padding-left: 20px; margin-top: 10px;">
@@ -238,7 +280,7 @@
             </video>
         </div>
 
-        <h2>Experiment of Chain 6</h2>
+        <h2 id="chain-6">Experiment of Chain 6</h2>
         <div class="section-content">
             <p><strong>Functions of Tools:</strong></p> 
             <ol style="padding-left: 20px; margin-top: 10px;">
@@ -258,7 +300,7 @@
             </video>
         </div>
 
-        <h2>Experiment of Chain 7</h2>
+        <h2 id="chain-7">Experiment of Chain 7</h2>
         <div class="section-content">
             <p><strong>Functions of Tools:</strong></p> 
             <ol style="padding-left: 20px; margin-top: 10px;">
@@ -278,7 +320,7 @@
             </video>
         </div>
 
-        <h2>Experiment of Chain 9</h2>
+        <h2 id="chain-9">Experiment of Chain 9</h2>
         <div class="section-content">
             <p><strong>Functions of Tools:</strong></p> 
             <ol style="padding-left: 20px; margin-top: 10px;">
@@ -298,7 +340,7 @@
             </video>
         </div>
 
-        <h2>Experiment of Chain 10</h2>
+        <h2 id="chain-10">Experiment of Chain 10</h2>
         <div class="section-content">
             <p><strong>Functions of Tools:</strong></p> 
             <ol style="padding-left: 20px; margin-top: 10px;">
@@ -318,8 +360,46 @@
             </video>
         </div>
 
+        <h2 id="vscode-cline">Experiment of VSCode Cline with Chain 1</h2>
+        <div class="section-content">
+            <p><strong>Functions of Tools:</strong></p> 
+            <ol style="padding-left: 20px; margin-top: 10px;">
+                <li>Tool 1: Inadvertently retrieve an external resource containing malicious prompts.</li>
+                <li>Tool 2: Read the local MCP configuration file.</li>
+                <li>Tool 3: Send the configuration information via email to the attacker.</li>
+            </ol>
+            <p><strong>Result:</strong></p>
+            <p>
+                After user's normal usage of VSCode Cline, MCP configuration in user's local machine is disclosed and the attacker can get the configuration information via email.
+            </p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="static/cline.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <h2 id="cherry-studio">Experiment of Cherry Studio with Chain 1</h2>
+        <div class="section-content">
+            <p><strong>Functions of Tools:</strong></p> 
+            <ol style="padding-left: 20px; margin-top: 10px;">
+                <li>Tool 1: Inadvertently retrieve an external resource containing malicious prompts.</li>
+                <li>Tool 2: Read the local MCP configuration file.</li>
+                <li>Tool 3: Send the configuration information via email to the attacker.</li>
+            </ol>
+            <p><strong>Result:</strong></p>
+            <p>
+                After user's normal usage of Cherry Studio, MCP configuration in user's local machine is disclosed and the attacker can get the configuration information via email.
+            </p>
+        </div>
+        <div class="video-container">
+            <video controls>
+                <source src="static/cherry.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
     </div>
 </body>
 </html>
-
-
